@@ -1,0 +1,211 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #090818;
+  color: #f4f4fb;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+header {
+  padding: 20px 8%;
+  background: #101827;
+  border-bottom: 1px solid #342947;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span,
+.hero span {
+  color: #69e0c2;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: #b5c0d0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #69e0c2;
+}
+
+#menuButton {
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(
+    circle at top,
+    #172b3d,
+    #080d18 65%
+  );
+}
+
+.tagline {
+  color: #7569e0;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 2.00;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 20px auto 30px;
+  color: #b5c0d0;
+}
+
+.button {
+  display: inline-block;
+  background: #69e0c2;
+  color: #080d18;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #a0f4df;
+}
+
+section:not(.hero) {
+  padding: 70px 8%;
+  scroll-margin-top: 85px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+#about > p,
+#contact > p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #b5c0d0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #101827;
+  padding: 25px;
+  border: 1px solid #293347;
+  border-radius: 14px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #69e0c2;
+}
+
+.card h3 {
+  color: #69e0c2;
+}
+
+.card p {
+  color: #b5c0d0;
+}
+
+.project-icon {
+  font-size: 35px;
+}
+
+#contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background: #101827;
+  padding: 20px;
+  color: #b5c0d0;
+  border-top: 1px solid #293347;
+}
+
+footer p {
+  margin: 5px;
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  #menuButton {
+    display: block;
+    background: none;
+    color: white;
+    border: 1px solid #293347;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #101827;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    padding: 85px 20px;
+  }
+
+  section:not(.hero) {
+    padding: 50px 6%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
